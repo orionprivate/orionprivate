@@ -1283,21 +1283,25 @@ body.light #p-start .start-redshift{color:#6366f1 !important}
 body.light #p-start .start-fact{color:#3a3e4a !important}
 body.cal-mode #p-start .start-redshift{color:#FDB515 !important}
 
-.llc {
-    font-size: 0.5em;
-    letter-spacing: 0.1em;
-    vertical-align: super;
-    margin-left: 0.2em;
-    font-weight: 400;
-}
 .nav-logo-sub {
-    font-size: 0.75em;
+    font-size: 0.7em;
+    font-style: italic;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.8;
 }
-.nav-logo-sub {
-    font-size: 0.75em;
+.nav-logo-text {
     font-style: italic;
 }
-
+.llc {
+    font-size: 0.45em;
+    letter-spacing: 0.12em;
+    vertical-align: super;
+    margin-left: 0.25em;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-style: italic;
+}
 </style>
 </head>
 <body>
@@ -1310,7 +1314,8 @@ body.cal-mode #p-start .start-redshift{color:#FDB515 !important}
 <canvas id="constellation-bg"></canvas>
 <canvas id="constellation-bg"></canvas>
 
-<nav class="nav"><div class="nav-inner"><div class="nav-logo" onclick="go('research')"><span class="nav-logo-text">Orion Private<span class="llc"> LLC</span></span><span class="nav-logo-sub">privacy consulting</span></div><button onclick="toggleTheme()" id="theme-btn" style="background:none;border:none;font-size:16px;cursor:pointer;padding:4px 8px;color:#6a7a98" title="Toggle light/dark mode">☀️</button><div class="nav-links" id="dl"></div><button class="nm" onclick="document.getElementById('mm').classList.toggle('open')">☰</button></div><div class="nmm" id="mm"></div></nav>
+<nav class="nav"><div class="nav-inner"><div class="nav-logo" onclick="go('research')"><span class="nav-logo-text">Orion Private<span class="llc"> LLC</span></span>
+<span class="nav-logo-sub">privacy consulting</span></div><button onclick="toggleTheme()" id="theme-btn" style="background:none;border:none;font-size:16px;cursor:pointer;padding:4px 8px;color:#6a7a98" title="Toggle light/dark mode">☀️</button><div class="nav-links" id="dl"></div><button class="nm" onclick="document.getElementById('mm').classList.toggle('open')">☰</button></div><div class="nmm" id="mm"></div></nav>
 <div class="wrap">
 
 <!-- START HERE -->
@@ -5257,13 +5262,12 @@ function tSvc(i){var d=document.getElementById('sd'+i),b=document.getElementById
 
 /* FAQ */
 var FQ=[
-{q:"What qualifies you to do this?",a:"B.A. in Legal Studies from UC Berkeley. Currently pursuing CIPP/US certification through the International Association of Privacy Professionals. Not an attorney, and nothing I provide is legal advice. What I bring is the training to read statutes, trace jurisdiction, and analyze encryption protocols at the implementation level. Orion Private is a registered California LLC with errors and omissions coverage and general liability insurance. The research published on this site is the best proof of how I work. Read an article. If the depth and clarity match what you are looking for, we are probably a good fit."},
+{q:"Can I trust you with my information?",a:"I practice everything I teach. Hands-on work happens on your screen, not mine. You see every step as it happens. If we reach something personal, like photos or emails, I walk you through the steps and you do that part yourself. I do not need to see it to protect it. Any files I handle go into an encrypted container on encrypted storage for the duration of the engagement. When we are done, I delete everything. Your data is a liability I do not want to hold.<br><br> On the business side: client records, invoices, and bookkeeping run on spreadsheets I built myself in LibreOffice. Everything lives in a Veracrypt container on local hardware, backed up to encrypted cloud storage. No client name or engagement detail has ever been entered into a third-party CRM, billing platform, or project management tool. I do not use software that monetizes the data passing through it. The operational infrastructure was built from scratch for the same reason the consulting exists. The defaults were not good enough."},
 {q:"Is this legal advice?",a:"No. I am not a lawyer. If your situation crosses into legal territory, I will tell you and refer you to one."},
 {q:"Who do you typically work with?",a:"Lawyers, journalists, executives, parents, activists, and people who just Googled their own name and did not like what they found. If you care enough to be reading this page, you are exactly who I work with"},
 {q:"How is this different from automated removal services?",a:"Automated services send bulk requests and hope for the best. Some outsource to workers in countries with data protections weaker than the ones you are trying to escape. I do every removal myself, by hand, from the US. But the real difference is that removal is one step in a larger process. I also figure out how you ended up on those sites in the first place and help you close the doors that put you there."},
-{q:"How do I get started?",a:"Send me a message through the encrypted intake form. No commitment, no cost. If it looks like a good fit for both of us, we schedule a 30-minute consultation ($60). If you move forward with any service, that fee is credited toward your total."},
-{q:"Can I trust you with my information?",a:"I practice everything I teach. Hands-on work happens on your screen, not mine. You see every step as it happens. If we reach something personal, like photos or emails, I walk you through the steps and you do that part yourself. I do not need to see it to protect it. Any files I handle go into an encrypted container on encrypted storage for the duration of the engagement. When we are done, I delete everything. Your data is a liability I do not want to hold.<br><br> On the business side: client records, invoices, and bookkeeping run on spreadsheets I built myself in LibreOffice. Everything lives in a Veracrypt container on local hardware, backed up to encrypted cloud storage. No client name or engagement detail has ever been entered into a third-party CRM, billing platform, or project management tool. I do not use software that monetizes the data passing through it. The operational infrastructure was built from scratch for the same reason the consulting exists. The defaults were not good enough."},
-{q:"Do you handle image or revenge porn takedowns?",a:"Yes. I understand what is at stake and I handle this with the discretion it deserves. You do not need to explain more than you want to. I work directly with platforms, search engines, and hosting providers to get content removed and I do not stop at the first request. Everything is documented in a way that supports legal proceedings if you choose to go that route."},
+{q:"Do you work with people outside the Bay Area?",a:"Yes. Most of what I do is remote. Threat modeling, privacy audits, data broker removal, and encrypted communications migration all work over a video call or encrypted chat. The only service that requires being in person is the Bitcoin self-custody setup, which I do in the Berkeley area."},
+{q:"What if I only need help with one thing?",a:"That is fine. Not everyone needs a full audit. If you just want to move off Gmail, clean up your data broker exposure, or set up a hardware wallet, we scope the engagement to exactly what you need. No upselling."},
 ];
 var fl=document.getElementById('faq-list');
 FQ.forEach(function(f,i){
