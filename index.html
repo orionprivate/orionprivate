@@ -1287,7 +1287,7 @@ body.cal-mode #p-start .start-redshift{color:#FDB515 !important}
     font-size: 0.7em;
     font-style: italic;
     letter-spacing: 0.15em;
-    text-transform: uppercase;
+    text-transform: capitalize;
     opacity: 0.8;
 }
 }
@@ -5261,11 +5261,12 @@ function tSvc(i){var d=document.getElementById('sd'+i),b=document.getElementById
 /* FAQ */
 var FQ=[
 {q:"Can I trust you with my information?",a:"I practice everything I teach. Hands-on work happens on your screen, not mine. You see every step as it happens. If we reach something personal, like photos or emails, I walk you through the steps and you do that part yourself. I do not need to see it to protect it. Any files I handle go into an encrypted container on encrypted storage for the duration of the engagement. When we are done, I delete everything. Your data is a liability I do not want to hold.<br><br> On the business side: client records, invoices, and bookkeeping run on spreadsheets I built myself in LibreOffice. Everything lives in a Veracrypt container on local hardware, backed up to encrypted cloud storage. No client name or engagement detail has ever been entered into a third-party CRM, billing platform, or project management tool. I do not use software that monetizes the data passing through it. The operational infrastructure was built from scratch for the same reason the consulting exists. The defaults were not good enough."},
-{q:"Is this legal advice?",a:"No. I am not a lawyer. If your situation crosses into legal territory, I will tell you and refer you to one."},
+{q:"Is this legal advice?",a:"No. I am not a lawyer. If your situation requires privilege-level protection, the correct structure is to hire an attorney and have the attorney retain me as an expert consultant. Our work then falls under the attorney's work product doctrine. I can recommend attorneys who understand this arrangement."},
 {q:"Who do you typically work with?",a:"Lawyers, journalists, executives, parents, activists, and people who just Googled their own name and did not like what they found. If you care enough to be reading this page, you are exactly who I work with"},
 {q:"How is this different from automated removal services?",a:"Automated services send bulk requests and hope for the best. Some outsource to workers in countries with data protections weaker than the ones you are trying to escape. I do every removal myself, by hand, from the US. But the real difference is that removal is one step in a larger process. I also figure out how you ended up on those sites in the first place and help you close the doors that put you there."},
 {q:"Do you work with people outside the Bay Area?",a:"Yes. Most of what I do is remote. Threat modeling, privacy audits, data broker removal, and encrypted communications migration all work over a video call or encrypted chat. The only service that requires being in person is the Bitcoin self-custody setup, which I do in the Berkeley area."},
 {q:"What if I only need help with one thing?",a:"That is fine. Not everyone needs a full audit. If you just want to move off Gmail, clean up your data broker exposure, or set up a hardware wallet, we scope the engagement to exactly what you need. No upselling."},
+{q:"What happens if you receive a court order? (detailed answer)",a:`I am not an attorney. There is no legal privilege between us. If a court issues a valid order compelling me to produce records or testify, I am legally required to comply. But I do not comply quietly. Every request is reviewed by counsel. If there are legal grounds to challenge, narrow, or quash a request, I pursue them. I disclose only what is specifically compelled and nothing beyond it. My NDA protects against voluntary disclosure. Legal process gets the minimum the law requires and not a word more. If your situation requires legal confidentiality, <a onclick="openFaq('Is this legal advice')" style="color:#9b8bf8;cursor:pointer">see this Q&A</a>.<br><br>I do not retain client data after an engagement. Working files are permanently deleted from encrypted local storage when the work is done. The report belongs to you. I do not keep a copy. My bookkeeping uses client codes, not names. A record looks like "OP-2026-007, privacy audit, $400, March 2026." No third-party platform stores client information. No CRM, no cloud billing, no software that holds your name on someone else's server. Everything lives on encrypted local hardware I control.<br><br>If a court order arrives, I can truthfully produce <strong><em>a client code, a dollar amount, a date, and a service type.</em></strong> The substantive work product is in your possession, not mine. <br><br><strong>How do I know your systems have not been compromised?</strong><br><br>You cannot verify this with certainty. What you can do is evaluate the design.<br><br>This site collects no analytics, sets no cookies, and runs no third-party scripts. The contact form encrypts your message with PGP before it leaves your browser. Email runs on Proton Mail. The anonymous contact channel runs on SimpleX or Signal. Client work lives in encrypted containers on local hardware, mounted only during active work. No client data touches a cloud service.<br><br><strong>Some transparency</strong><br><br>Orion Private publishes a PGP-signed transparency statement on the first day of each calendar month.  The signed statement confirms that no government request, subpoena, court order, or national security letter seeking client information has been received, that no gag order or nondisclosure requirement is in effect, and that all data handling practices described on this site are operating as stated.<br><br>The current signed statement is available at <a href="data:text/plain;charset=utf-8,-----BEGIN%20PGP%20SIGNED%20MESSAGE-----%0AHash%3A%20SHA512%0A%0AOrion%20Private%20LLC%0ATransparency%20Statement%0A%0AMonth%3A%20April%202026%0ADate%3A%20April%2010%2C%202026%0A%0AAs%20of%20the%20date%20above%2C%20Orion%20Private%20LLC%20has%20received%200%0Agovernment%20requests%2C%20subpoenas%2C%20court%20orders%2C%20or%20national%0Asecurity%20letters%20seeking%20client%20information%20or%20records.%0ANo%20gag%20order%20or%20nondisclosure%20requirement%20is%20in%20effect.%0AAll%20data%20handling%20practices%20described%20at%20orionprivate.com%0Aare%20operating%20as%20stated.%0A%0AProof%20of%20date%3A%20%22Reuters%20(April%2010%2C%202026)%3A%20Iran%20demands%20Lebanon%20ceasefire%2C%20unfreezing%20of%20assets%20before%20peace%20talks%0ABy%20Parisa%20Hafezi%2C%20Maya%20Gebeily%2C%20Maayan%20Lubell%20and%20Ariba%20Shahid%22%0A%0AThis%20statement%20is%20published%20monthly%20on%20the%20first%20day%20of%0Aeach%20calendar%20month.%20If%20this%20statement%20is%20not%20current%2C%0Aits%20absence%20may%20indicate%20the%20statement%20can%20no%20longer%20be%0Amade%20truthfully.%0A-----BEGIN%20PGP%20SIGNATURE-----%0A%0AiJEEARYKADkWIQRhWCoWu9i9vsm%2Fvrg9uQ5p71lo1QUCadkgUxsUgAAAAAAEAA5t%0AYW51MiwyLjUrMS4xMSwyLDEACgkQPbkOae9ZaNXVcQEA941y9%2Br%2BAOlpmfsw3lpT%0ApzBXSKj6aeYcviZMi5%2BlV%2B8BAKAI8%2BpCzn%2FOvx35346%2F6B7vKHe8b9DUJJCqFX7X%0ADnED%0A%3Dbptz%0A-----END%20PGP%20SIGNATURE-----" download="canary.txt" style="color:#9b8bf8">download signed statement</a><br><br>Anyone can verify the signature against my public key, which is published on this site and on public keyservers. If the signature is valid and the date is current, the statement is authentic and unmodified. If the file is missing, the signature does not verify, or the statement is not current for the quarter, draw your own conclusions.<br><br>The statement also contains a headline from a major news source dated within 48 hours of signing. This proves the statement was written on or after that date and was not pre-signed in advance.`}
 ];
 var fl=document.getElementById('faq-list');
 FQ.forEach(function(f,i){
@@ -6255,6 +6256,54 @@ function shareTop(el){
 
 if('scrollRestoration' in history) history.scrollRestoration='manual';
 
+const canaryText = `-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Orion Private LLC
+Transparency Statement
+
+Month: April 2026
+Date: April 10, 2026
+
+As of the date above, Orion Private LLC has received 0
+government requests, subpoenas, court orders, or national
+security letters seeking client information or records.
+No gag order or nondisclosure requirement is in effect.
+All data handling practices described at orionprivate.com
+are operating as stated.
+
+Proof of date: "Reuters (April 10, 2026): Iran demands Lebanon ceasefire, unfreezing of assets before peace talks
+By Parisa Hafezi, Maya Gebeily, Maayan Lubell and Ariba Shahid"
+
+This statement is published monthly on the first day of
+each calendar month. If this statement is not current,
+its absence may indicate the statement can no longer be
+made truthfully.
+-----BEGIN PGP SIGNATURE-----
+
+iJEEARYKADkWIQRhWCoWu9i9vsm/vrg9uQ5p71lo1QUCadkgUxsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMSwyLDEACgkQPbkOae9ZaNXVcQEA941y9+r+AOlpmfsw3lpT
+pzBXSKj6aeYcviZMi5+lV+8BAKAI8+pCzn/Ovx35346/6B7vKHe8b9DUJJCqFX7X
+DnED
+=bptz
+-----END PGP SIGNATURE-----`;
+
+window.downloadCanary = function(){
+    const b = new Blob([canaryText],{type:'text/plain'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(b);
+    a.download = 'canary.txt';
+    a.click();
+}
+
+function openFaq(text){
+    document.querySelectorAll('.faq-q, .fq').forEach(el=>{
+        if(el.textContent.includes(text)){
+            el.click();
+            el.scrollIntoView({behavior:'smooth',block:'center'});
+        }
+    });
+}
 </script>
 </body>
 </html>
