@@ -1300,6 +1300,38 @@ body.cal-mode #p-start .start-redshift{color:#FDB515 !important}
     text-transform: uppercase;
     font-style: italic;
 }
+/* Hero card - full width, no grid */
+.hero-card {
+  margin-bottom: 32px;
+}
+.hero-card .cd {
+  max-width: 100%;
+}
+
+/* Section label - small teal uppercase, like cover page fields */
+.section-label {
+  font-size: .62rem;
+  font-weight: 700;
+  color: #5a8a9a;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* Section description - one line of curatorial text */
+.section-desc {
+  font-size: .74rem;
+  color: #5a6a88;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+/* Subtle section divider */
+.section-rule {
+  border: none;
+  border-top: 1px solid rgba(100, 140, 180, 0.08);
+  margin: 36px 0 28px 0;
+}
 </style>
 </head>
 <body>
@@ -1347,30 +1379,460 @@ body.cal-mode #p-start .start-redshift{color:#FDB515 !important}
 <div class="fresh-dot"></div>
 <span class="fresh-text"><strong>8 reports published</strong> · Actively maintained · New research in progress</span>
 </div>
-<div class="st">Featured</div>
-<div class="g2" style="margin-bottom:32px">
-    <div class="cd" style="cursor:pointer" onclick="go('post-patel')"><div class="pcat">Investigative Report</div><h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">The FBI director used Gmail. Iranian hackers read his email for years.</h3><p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">On March 27, 2026, an Iranian state-linked group published over 300 emails from FBI Director Kash Patel's personal Gmail. The FBI confirmed the breach. The emails were not obtained by breaking encryption. They were obtained because a consumer email account had credentials in prior data breaches.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span class="tag">Gmail</span><span class="tag">Credential Stuffing</span><span class="tag">Iran</span><span class="tag">OPSEC</span></div><div style="display:flex;justify-content:space-between"><span style="font-size:.68rem;color:#4a5a78">March 28, 2026 · 10 min<span class="new-pill"> NEW</span></span><span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span></div></div>
-<div class="cd" style="cursor:pointer" onclick="go('post-ftc')"><div class="pcat">Analysis</div><h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">The FTC was never enough: How America's last privacy enforcer was designed to fail, then gutted on purpose</h3><p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">The FTC's consent decrees were the closest thing Americans had to enforceable privacy law. In 2025, commissioners were fired, guidance was deleted, and consent orders were reopened. Chris Jay Hoofnagle's academic work predicted every failure point.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span class="tag">FTC</span><span class="tag">Section 5</span><span class="tag">Enforcement</span><span class="tag">Hoofnagle</span></div><div style="display:flex;justify-content:space-between"><span style="font-size:.68rem;color:#4a5a78">February 2026 &middot; 20 min</span><span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> &rarr;</span></div></div>
-
-<div class="cd" style="cursor:pointer" onclick="go('post-pt')"><div class="pcat">Email Privacy</div><h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">Proton Mail vs Tuta Mail - What a privacy advocate looks at</h3><p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">Both encrypt your inbox. But jurisdiction, metadata exposure, encryption scope, and real world court orders tell a more complicated story.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span class="tag">Email</span><span class="tag">Encryption</span><span class="tag">Jurisdiction</span></div><div style="display:flex;justify-content:space-between"><span style="font-size:.68rem;color:#4a5a78">January 2026 · 22 min</span><span style="font-size:.68rem;color:#82a6fc;font-weight:600" class="read-link"><span class="read-ul">Read</span> →</span></div></div>
-<div class="cd" style="cursor:pointer" onclick="go('post-nm')"><div class="pcat">Privacy Research</div><h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">What your notes app knows about you, even when your notes are encrypted</h3><p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">End-to-end encryption protects your note content. It does not protect the metadata your notes generate.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span class="tag">Notes</span><span class="tag">Metadata</span><span class="tag">E2EE</span></div><div style="display:flex;justify-content:space-between"><span style="font-size:.68rem;color:#4a5a78">January 2026 · 15 min</span><span style="font-size:.68rem;color:#82a6fc;font-weight:600" class="read-link"><span class="read-ul">Read</span> →</span></div></div>
+<!-- ═══ HERO: WHY PRIVACY MATTERS ═══ -->
+<div class="hero-card">
+  <div class="cd" style="cursor:pointer" onclick="go('post-wpm')">
+    <div class="pcat">Analysis</div>
+    <h3 style="font-size:1.05rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:10px">Why privacy matters. The real answer.</h3>
+    <p style="font-size:.78rem;color:#9aaac8;line-height:1.7;margin-bottom:12px">Your address is for sale. Your location is recorded and traded. Your email is stored and discoverable. The law that governs all of it was built for rotary telephones. This is the article that explains why everything else on this site matters, grounded in Supreme Court opinions, peer-reviewed research, and the legal architecture most people have never heard of.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="tag">Data Brokers</span>
+      <span class="tag">Fourth Amendment</span>
+      <span class="tag">Mosaic Theory</span>
+      <span class="tag">Hoofnagle</span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="font-size:.68rem;color:#4a5a78">April 2026 · 22 min<span class="new-pill"> NEW</span></span>
+      <span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span>
+    </div>
+  </div>
 </div>
-<div class="st" style="margin-top:28px">All Research</div>
 
-<div class="cd" style="cursor:pointer" onclick="go('post-db')"><div class="pcat">Analysis</div><h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">The government is buying your data because it cannot legally collect it</h3><p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">The FBI confirmed to Congress this month that it purchases location data from commercial brokers. No warrant. No judge. No notification. This has been happening for years, across multiple agencies and administrations. Here is the full story.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span class="tag">Data Brokers</span><span class="tag">Fourth Amendment</span><span class="tag">Surveillance</span><span class="tag">FISA</span></div><div style="display:flex;justify-content:space-between"><span style="font-size:.68rem;color:#4a5a78">March 2026 · 15 min</span><span style="font-size:.68rem;color:#82a6fc;font-weight:600" class="read-link"><span class="read-ul">Read</span> →</span></div></div>
+<hr class="section-rule">
 
-<div class="cd" style="cursor:pointer" onclick="go('post-msg')"><div class="pcat">Privacy Research</div><h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">SMS vs iMessage vs WhatsApp vs Telegram vs Signal: What the FBI's own document tells us</h3><p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">In 2021 the FBI produced an internal guide detailing exactly what data it can legally obtain from nine messaging apps. The document was obtained via FOIA. Here is a field-by-field analysis of five of the most common services.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span class="tag">Messaging</span><span class="tag">E2EE</span><span class="tag">FBI</span><span class="tag">Metadata</span></div><div style="display:flex;justify-content:space-between"><span style="font-size:.68rem;color:#4a5a78">December 2025 · 25 min</span><span style="font-size:.68rem;color:#82a6fc;font-weight:600" class="read-link"><span class="read-ul">Read</span> →</span></div></div>
+<!-- ═══ ESSENTIAL READING ═══ -->
+<div class="section-label">Essential Reading</div>
+<div class="section-desc">The cases, the law, and the landscape. Start here if you are new.</div>
+<div class="g2" style="margin-bottom:0">
 
-<div class="cd" style="cursor:pointer" onclick="go('post-adult')"><div class="pcat">Privacy Research</div><h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">What porn sites know about you, and who they tell</h3><p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">Private browsing does not make you private. A UC Berkeley study found Google on almost every adult site, search terms leaked in plaintext, and sexual preferences encoded in cookies.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span class="tag">Tracking</span><span class="tag">Metadata</span><span class="tag">Browser Privacy</span></div><div style="display:flex;justify-content:space-between"><span style="font-size:.68rem;color:#4a5a78">November 2025 · 10 min</span><span style="font-size:.68rem;color:#82a6fc;font-weight:600" class="read-link"><span class="read-ul">Read</span> →</span></div></div>
+  <div class="cd" style="cursor:pointer" onclick="go('post-patel')">
+    <div class="pcat">Investigative Report</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">The FBI director used Gmail. Iranian hackers read his email for years.</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">On March 27, 2026, an Iranian state-linked group published over 300 emails from FBI Director Kash Patel's personal Gmail. The FBI confirmed the breach. The emails were not obtained by breaking encryption. They were obtained because a consumer email account had credentials in prior data breaches.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="tag">Gmail</span>
+      <span class="tag">Credential Stuffing</span>
+      <span class="tag">Iran</span>
+      <span class="tag">OPSEC</span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="font-size:.68rem;color:#4a5a78">March 28, 2026 · 10 min</span>
+      <span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span>
+    </div>
+  </div>
 
-<div class="cd" style="cursor:pointer" onclick="go('post-photos')"><div class="pcat">Privacy Research</div><h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">Your photo library knows more about you than your journal: Ente vs iCloud vs Google Photos vs OneDrive</h3><p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">Every photo records your GPS coordinates, device serial number, and exact timestamp. When you upload to the cloud, the question is who can see it, who can be compelled to hand it over, and whether AI is training on it.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span class="tag">Photos</span><span class="tag">Encryption</span><span class="tag">AI</span><span class="tag">EXIF</span></div><div style="display:flex;justify-content:space-between"><span style="font-size:.68rem;color:#4a5a78">November 2025 · 25 min</span><span style="font-size:.68rem;color:#82a6fc;font-weight:600" class="read-link"><span class="read-ul">Read</span> →</span></div></div>
+  <div class="cd" style="cursor:pointer" onclick="go('post-db')">
+    <div class="pcat">Analysis</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">The government is buying your data because it cannot legally collect it</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">The FBI confirmed to Congress this month that it purchases location data from commercial brokers. No warrant. No judge. No notification. This has been happening for years, across multiple agencies and administrations. Here is the full story.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="tag">Data Brokers</span>
+      <span class="tag">Fourth Amendment</span>
+      <span class="tag">Surveillance</span>
+      <span class="tag">FISA</span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="font-size:.68rem;color:#4a5a78">March 2026 · 15 min</span>
+      <span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span>
+    </div>
+  </div>
 
-<div class="cd cd-evergreen" style="cursor:pointer" onclick="go('post-enc')"><div class="pcat">Privacy Research</div><h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">How encryption actually works, why it matters, and where it stops protecting you</h3><p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">Symmetric vs asymmetric, AES-256 vs quantum computers, what HTTPS actually protects, and why none of it matters if your phone is compromised. The foundational reference for everything else on this site.</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px"><span class="tag">Encryption</span><span class="tag">AES-256</span><span class="tag">Quantum</span><span class="tag">OPSEC</span></div><div style="display:flex;justify-content:space-between"><span style="font-size:.68rem;color:#4a5a78">October 2025 · 25 min</span><span style="font-size:.68rem;color:#82a6fc;font-weight:600" class="read-link"><span class="read-ul">Read</span> →</span></div></div>
+</div>
+<div class="g2" style="margin-bottom:0">
 
+  <div class="cd" style="cursor:pointer" onclick="go('post-ftc')">
+    <div class="pcat">Analysis</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">The FTC was never enough: How America's last privacy enforcer was designed to fail, then gutted on purpose</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">The FTC's consent decrees were the closest thing Americans had to enforceable privacy law. In 2025, commissioners were fired, guidance was deleted, and consent orders were reopened. Chris Jay Hoofnagle's academic work predicted every failure point.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="tag">FTC</span>
+      <span class="tag">Section 5</span>
+      <span class="tag">Enforcement</span>
+      <span class="tag">Hoofnagle</span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="font-size:.68rem;color:#4a5a78">February 2026 · 20 min</span>
+      <span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span>
+    </div>
+  </div>
 
-<div class="st">Coming Soon</div>
-<div class="cd" style="opacity:.7;cursor:default"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span class="pill po">COMING SOON</span><span style="font-size:.68rem;color:#4a5a78">April 2026</span></div><h3 style="font-size:.85rem;font-weight:700;color:#8b9ab8;margin-bottom:4px">The VPN trust problem - What "No logs" actually means under subpoena</h3><p style="font-size:.73rem;color:#5a6a88">Every VPN claims no logs. Court records tell a different story.</p></div>
-<div class="cd" style="opacity:.7;cursor:default"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span class="pill po">COMING SOON</span><span style="font-size:.68rem;color:#4a5a78">May 2026</span></div><h3 style="font-size:.85rem;font-weight:700;color:#8b9ab8;margin-bottom:4px">Signal vs Session vs SimpleX - A metadata comparison</h3><p style="font-size:.73rem;color:#5a6a88">Which messenger leaks the least?</p></div>
+  <!-- empty cell to keep grid balanced -->
+  <div></div>
+
+</div>
+
+<hr class="section-rule">
+
+<!-- ═══ FIELD ASSESSMENTS ═══ -->
+<div class="section-label">Field Assessments</div>
+<div class="section-desc">Service-by-service comparisons. What gets encrypted, what gets handed over, and what the privacy policies actually say.</div>
+<div class="g2" style="margin-bottom:0">
+
+  <div class="cd" style="cursor:pointer" onclick="go('post-pt')">
+    <div class="pcat">Email Privacy</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">Proton Mail vs Tuta Mail - What a privacy advocate looks at</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">Both encrypt your inbox. But jurisdiction, metadata exposure, encryption scope, and real world court orders tell a more complicated story.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="tag">Email</span>
+      <span class="tag">Encryption</span>
+      <span class="tag">Jurisdiction</span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="font-size:.68rem;color:#4a5a78">January 2026 · 22 min</span>
+      <span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span>
+    </div>
+  </div>
+
+  <div class="cd" style="cursor:pointer" onclick="go('post-msg')">
+    <div class="pcat">Privacy Research</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">SMS vs iMessage vs WhatsApp vs Telegram vs Signal: What the FBI's own document tells us</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">In 2021 the FBI produced an internal guide detailing exactly what data it can legally obtain from nine messaging apps. The document was obtained via FOIA. Here is a field-by-field analysis of five of the most common services.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="tag">Messaging</span>
+      <span class="tag">E2EE</span>
+      <span class="tag">FBI</span>
+      <span class="tag">Metadata</span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="font-size:.68rem;color:#4a5a78">December 2025 · 25 min</span>
+      <span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span>
+    </div>
+  </div>
+
+</div>
+<div class="g2" style="margin-bottom:0">
+
+  <div class="cd" style="cursor:pointer" onclick="go('post-nm')">
+    <div class="pcat">Privacy Research</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">What your notes app knows about you, even when your notes are encrypted</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">End-to-end encryption protects your note content. It does not protect the metadata your notes generate.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="tag">Notes</span>
+      <span class="tag">Metadata</span>
+      <span class="tag">E2EE</span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="font-size:.68rem;color:#4a5a78">January 2026 · 15 min</span>
+      <span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span>
+    </div>
+  </div>
+
+  <div class="cd" style="cursor:pointer" onclick="go('post-photos')">
+    <div class="pcat">Privacy Research</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">Your photo library knows more about you than your journal: Ente vs iCloud vs Google Photos vs OneDrive</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">Every photo records your GPS coordinates, device serial number, and exact timestamp. When you upload to the cloud, the question is who can see it, who can be compelled to hand it over, and whether AI is training on it.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="tag">Photos</span>
+      <span class="tag">Encryption</span>
+      <span class="tag">AI</span>
+      <span class="tag">EXIF</span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="font-size:.68rem;color:#4a5a78">November 2025 · 25 min</span>
+      <span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span>
+    </div>
+  </div>
+
+</div>
+
+<hr class="section-rule">
+
+<!-- ═══ TECHNICAL REFERENCE ═══ -->
+<div class="section-label">Technical Reference</div>
+<div class="section-desc">How the systems work under the hood. Not required reading, but it makes everything else make more sense.</div>
+<div class="g2" style="margin-bottom:0">
+
+  <div class="cd" style="cursor:pointer" onclick="go('post-enc')">
+    <div class="pcat">Technical Brief</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">How encryption actually works, why it matters, and where it stops protecting you</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">Symmetric vs asymmetric, AES-256 vs quantum computers, what HTTPS actually protects, and why none of it matters if your phone is compromised. The foundational reference for everything else on this site.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="tag">Encryption</span>
+      <span class="tag">AES-256</span>
+      <span class="tag">Quantum</span>
+      <span class="tag">OPSEC</span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="font-size:.68rem;color:#4a5a78">October 2025 · 25 min</span>
+      <span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span>
+    </div>
+  </div>
+
+ <div class="cd" style="cursor:default">
+    <div class="pcat">Technical Brief</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">Your Signal is private. Your carrier is not. Here is what your carrier actually sees.</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">You turned off location services. You use Signal. You run a VPN. None of that touches the cellular layer. Your carrier still knows where you are, what towers you connected to, and what device you used. That information is stored for years.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="tag">Cellular</span>
+      <span class="tag">IMSI</span>
+      <span class="tag">Location</span>
+      <span class="tag">Carrier</span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="font-size:.68rem;color:#4a5a78">March 2026 · 10 min</span>
+      <span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span>
+    </div>
+  </div>
+
+</div>
+<div class="g2" style="margin-bottom:0">
+
+  <div class="cd" style="cursor:pointer" onclick="go('post-adult')">
+    <div class="pcat">Privacy Research</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">What porn sites know about you, and who they tell</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6;margin-bottom:12px">Private browsing does not make you private. A UC Berkeley study found Google on almost every adult site, search terms leaked in plaintext, and sexual preferences encoded in cookies.</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <span class="tag">Tracking</span>
+      <span class="tag">Metadata</span>
+      <span class="tag">Browser Privacy</span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="font-size:.68rem;color:#4a5a78">November 2025 · 10 min</span>
+      <span class="read-link" style="font-size:.68rem;color:#82a6fc;font-weight:600"><span class="read-ul">Read</span> →</span>
+    </div>
+  </div>
+
+  <!-- empty cell to keep grid balanced -->
+  <div></div>
+
+</div>
+
+<hr class="section-rule">
+
+<!-- ═══ IN PROGRESS ═══ -->
+<div class="section-label">In Progress</div>
+<div class="section-desc">Currently in research or drafting.</div>
+<div class="g2">
+
+  <div class="cd" style="cursor:default">
+    <div style="font-size:.58rem;font-weight:700;color:#82a6fc;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">COMING SOON · April 2026</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">The VPN trust problem - What "No logs" actually means under subpoena</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6">Every VPN claims no logs. Court records tell a different story.</p>
+  </div>
+
+  <div class="cd" style="cursor:default">
+    <div style="font-size:.58rem;font-weight:700;color:#82a6fc;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">COMING SOON · May 2026</div>
+    <h3 style="font-size:.92rem;font-weight:800;color:#f0f4ff;line-height:1.3;margin-bottom:8px">Signal vs Session vs SimpleX - A metadata comparison</h3>
+    <p style="font-size:.76rem;color:#7a8aa8;line-height:1.6">Which messenger leaks the least?</p>
+  </div>
+
+</div>
+<!-- POST VIEWER (Why Privacy Matters) -->
+<div class="pg" id="p-post-wpm">
+<div style="margin-bottom:16px"><button class="bs" onclick="go('research')">← Back to Research</button></div>
+<div class="blog-wrap">
+
+  <!-- HEADER -->
+  <header class="blog-header">
+    <div class="blog-category" data-stamp="analysis">Analysis</div>
+    <h1 class="blog-title">Why privacy matters. The real answer.</h1>
+    <p class="blog-deck">Most people have a vague sense that their digital privacy is compromised. They have heard the metaphors. This piece is for the moment you stop nodding and start asking: what does that actually mean for me? Not in theory. Not as a political position. In concrete, documented, happened-to-real-people terms.</p>
+    <div class="blog-meta">
+      <span class="author-badge"><span class="author-icon">D</span> David</span>
+      <div class="meta-dot"></div>
+      <span>April 2026</span>
+      <div class="meta-dot"></div>
+      <span>Privacy Research</span>
+      <div class="meta-dot"></div>
+      <span>~22 min read</span>
+      <div class="meta-dot"></div>
+      <span class="share-top" onclick="shareTop(this)">Share</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <div class="blog-intro">
+    Everything else on this site evaluates specific tools, services, and systems. This article steps back and asks the question that has to be answered before any of those evaluations matter: <strong>why should you care?</strong> The answer has three parts. First, what is actually out there: the specific ways your information is collected, aggregated, and sold. Second, why the law allows it: the legal architecture that makes all of this not only possible but ordinary. Third, what happens when someone puts the pieces together: the compound risk that no single data point reveals on its own.
+  </div>
+
+  <div class="toc-wrap">
+    <button class="toc-toggle" onclick="this.parentElement.classList.toggle('open')">
+      <span class="toc-label">In this article</span>
+      <span class="toc-icon">+</span>
+    </button>
+    <div class="toc-list">
+      <a class="toc-link" href="#s-wpm-exposure">What Is Actually Out There</a>
+      <a class="toc-link" href="#s-wpm-law">Why the Law Allows It</a>
+      <a class="toc-link" href="#s-wpm-mosaic">The Picture the Pieces Make</a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- MOVEMENT 1: WHAT IS ACTUALLY OUT THERE -->
+  <div class="section">
+    <p class="section-title" id="s-wpm-exposure">What Is Actually Out There</p>
+    <p class="section-intro">In 2000, Latanya Sweeney, then a researcher at Carnegie Mellon and later a professor at Harvard, published a study that should have changed the way Americans think about personal data. It did not change nearly enough.</p>
+
+    <div class="compare-grid">
+
+      <div class="compare-card">
+        <span class="cc-label">Three data points identify 87% of Americans</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">Using 1990 Census summary data, Sweeney demonstrated that 87% of the U.S. population could be uniquely identified by the combination of just three data points: five-digit zip code, date of birth, and gender. To prove it was not theoretical, she cross-referenced anonymized hospital discharge records with publicly available voter registration rolls and successfully re-identified the medical records of William Weld, then the governor of Massachusetts, and mailed them to his office. The work contributed directly to the development of HIPAA's de-identification standards. <a href="#wpm-ref1" class="cite">[1]</a><br><br>That was twenty-five years ago, with 1990 Census data and a voter roll. Today, the information available about you is orders of magnitude richer, more granular, and more accessible.</span></div>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <span class="cc-label">The data broker landscape</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">There are thousands of data broker companies operating in the United States. California's Delete Act (SB 362, signed in 2023) now requires brokers to register with the California Privacy Protection Agency, and the Consumer Financial Protection Bureau proposed a federal rule in late 2024 to bring data brokers under the Fair Credit Reporting Act. <a href="#wpm-ref2" class="cite">[2]</a> <a href="#wpm-ref3" class="cite">[3]</a> But until very recently, and still at the federal level, this industry operated with essentially no registration, no licensing, and no meaningful oversight.<br><br>A typical people-search site will return your full legal name, your current and former home addresses, your phone number, your email address, your estimated age and date of birth, the names of your relatives and known associates, your estimated income range, and in many cases your political party registration and property ownership records. There is no background check required to access this information. There is no verification of identity or intent.<br><br>The companies that maintain these profiles argue that the underlying data is public. This is technically true and practically misleading. A property deed filed with your county recorder is a public record. But the act of collecting that deed, combining it with your phone number from a breached database, your email from a loyalty program, and your age from voter registration, and then publishing the assembled profile on a website indexed by Google, is something qualitatively different from a record sitting in a courthouse filing cabinet. The aggregation is the product. And the aggregation is what makes the data dangerous.<br><br>Professor Chris Hoofnagle of UC Berkeley Law has argued for over a decade that commercial data brokers effectively perform law-enforcement functions by enabling the compilation and search of personal information at a scale that the government itself would need a legal process to achieve, and that they should be regulated accordingly. <a href="#wpm-ref4" class="cite">[4]</a></span></div>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <span class="cc-label">Your phone is a witness</span>
+        <span class="cc-risk high">⚠ Location data is being sold commercially at a scale that makes anonymization meaningless</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">Your smartphone records your location continuously, with a precision measured in meters. This data is collected by the operating system, by individual apps, by advertising networks embedded in those apps, and by your cellular carrier. The result is a complete record of your physical life: where you sleep, where you work, where you eat, which doctor you visit, which friend's house you stopped at, and how long you stayed. This would be concerning enough if the data stayed on your phone. It does not.<br><br>In 2024, the Federal Trade Commission took enforcement action against four data brokers (X-Mode Social, InMarket, Gravy Analytics, and Mobilewalla) for selling precise consumer location data that could be used to track visits to reproductive health clinics, places of worship, and domestic abuse shelters. The FTC banned these companies from selling or disclosing sensitive location data, a first-of-its-kind prohibition. <a href="#wpm-ref5" class="cite">[5]</a><br><br>In a separate investigation, Senator Ron Wyden documented that the data broker Near Intelligence had provided location data to an anti-abortion organization called the Veritas Society, which used it to target people who visited 600 Planned Parenthood clinics across 48 states. Near's advertising partner drew digital boundaries around clinic buildings and parking lots and delivered over 14 million targeted ads to the phones detected inside those boundaries. Near's chief privacy officer confirmed to Wyden's staff that the company had no technical controls to prevent this kind of targeting until after the Supreme Court's Dobbs decision in 2022. <a href="#wpm-ref6" class="cite">[6]</a><br><br>These were not government surveillance operations. They were commercial transactions available to anyone willing to pay for a data subscription.</span></div>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <span class="cc-label">"Anonymous" data is not anonymous</span>
+        <span class="cc-risk high">⚠ This has been empirically falsified in peer-reviewed literature, repeatedly, for over a decade</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">The industry's defense is that location data is "anonymized." The peer-reviewed research is unambiguous: it is not.<br><br>In 2013, a team led by Yves-Alexandre de Montjoye published a study in Nature examining fifteen months of mobility data for 1.5 million individuals. They found that four spatio-temporal data points, four places and times where a person was observed, are sufficient to uniquely identify 95% of individuals in the dataset. <a href="#wpm-ref7" class="cite">[7]</a><br><br>In 2021, de Montjoye and colleagues published a follow-up in Patterns confirming the finding at country scale: in a dataset of 60 million people, 93% could be uniquely re-identified with four data points. The mathematical lower bound, meaning the minimum re-identification rate regardless of any anonymization technique applied, was 22%. With five data points, that lower bound rose to 87%. <a href="#wpm-ref8" class="cite">[8]</a><br><br>Four data points. Your home at night, your office in the morning, your gym after work, and a restaurant on Saturday. That is enough to identify you, personally, out of sixty million people.</span></div>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <span class="cc-label">Your email is evidence. Your accounts are a chain.</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">Every email sent through a consumer provider is stored, often indefinitely, in a jurisdiction you may not have considered, under a privacy policy you almost certainly have not read. If you are involved in a lawsuit, a custody dispute, a tax audit, a workplace investigation, or a criminal inquiry, that archive is discoverable. Not the emails you chose to share with the other party. All of them. Every draft, every thread, every attachment, going back years.<br><br>Meanwhile, most people use the same email address for their bank, their health portal, their social media, their child's school, and the loyalty program at their grocery store. Often the same password, or a small rotation. A breach at any one of those services yields credentials that unlock the others. The technique is called credential stuffing and it is automated, continuous, and effective. The most comprehensive breach database publicly available, Troy Hunt's Have I Been Pwned project, contains over 14 billion compromised accounts. If you have used the internet for any meaningful length of time, at least one of your email and password combinations has been exposed.</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout"><span class="label">THE LANDSCAPE</span> Your address is for sale. Your location is being recorded and traded. Your email is stored and discoverable. Your accounts are chained together by shared credentials, many of which have already been breached. Every piece of this is documented, quantified, and in most cases perfectly legal. Which raises the question: why?</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- MOVEMENT 2: WHY THE LAW ALLOWS IT -->
+  <div class="section">
+    <p class="section-title" id="s-wpm-law">Why the Law Allows It</p>
+    <p class="section-intro">The legal architecture that permits mass commercial surveillance in the United States is not the product of a deliberate policy choice. It is the product of a series of judicial doctrines and legislative frameworks built for a world that no longer exists, applied to a technological landscape their authors could not have imagined.</p>
+
+    <div class="compare-grid">
+
+      <div class="compare-card">
+        <span class="cc-label">The third-party doctrine</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">The foundational doctrine is called the third-party doctrine, and understanding it is essential to understanding why your digital life is as exposed as it is.<br><br>In 1979, in Smith v. Maryland, the Supreme Court held that a person has no reasonable expectation of privacy in information voluntarily shared with a third party. The case involved a pen register, a device that recorded the phone numbers dialed from a suspect's telephone. The Court reasoned that because the caller knew the phone company would receive the numbers he dialed, he had voluntarily conveyed that information and therefore "assumed the risk" that it would be disclosed to the government. No warrant was required. <a href="#wpm-ref9" class="cite">[9]</a><br><br>The reasoning made a certain kind of sense in 1979. A pen register captured a list of phone numbers. It did not capture the content of conversations. It did not follow you through your day. It did not know where you slept, who you saw, or how long you stayed.<br><br>But the doctrine did not stay in 1979. It was extended, by analogy, to nearly every category of digital record held by a third party. Your bank records. Your internet browsing history. Your email stored on a provider's server. Under the third-party doctrine, none of it was entitled to Fourth Amendment protection, because you had "voluntarily" shared it with the company that held it. The fact that participating in modern economic life requires sharing this information, that you cannot have a bank account, a phone, or an email address without generating records held by third parties, did not factor into the analysis.</span></div>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <span class="cc-label">Carpenter v. United States (2018)</span>
+        <span class="cc-risk low">✓ The Supreme Court acknowledged the doctrine was failing</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">For four decades, that was the law. And then the Supreme Court acknowledged what had become undeniable.<br><br>In 2018, in Carpenter v. United States, the Court held that the government's acquisition of historical cell-site location information from a wireless carrier constituted a search under the Fourth Amendment and required a warrant. Chief Justice Roberts, writing for the majority, described cell-site records as providing the government with "near perfect surveillance" and the ability to "travel back in time to retrace a person's whereabouts." The Court recognized that location data reveals a person's "familial, political, professional, religious, and sexual associations." And it rejected the government's argument that the third-party doctrine applied, finding that there is "a world of difference between the limited types of personal information" at issue in Smith v. Maryland and "the exhaustive chronicle of location information casually collected by wireless carriers." <a href="#wpm-ref10" class="cite">[10]</a><br><br>Carpenter was a landmark. But it was also deliberately narrow. The Court said it was not overruling the third-party doctrine. It was not extending its holding to real-time location data, to "tower dumps," or to other categories of records held by third parties. The opinion addressed one specific type of data (historical cell-site location information) obtained by one specific means (from a wireless carrier). Everything else, your email, your search history, your cloud-stored documents, your app usage data, was left exactly where Smith v. Maryland put it in 1979.</span></div>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <span class="cc-label">ECPA: the 1986 statute that governs your email</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">The primary federal statute protecting your email is the Electronic Communications Privacy Act of 1986, known as ECPA. ECPA was enacted before the World Wide Web existed. It was written for a world where email was stored briefly on a server and then downloaded to a local machine. Under ECPA's original framework, email stored on a server for more than 180 days was treated as abandoned, and the government could access it with a subpoena rather than a warrant. Congress has since amended portions of the statute, and the Sixth Circuit held in United States v. Warshak (2010) that email content is protected by the Fourth Amendment regardless of age. <a href="#wpm-ref11" class="cite">[11]</a> But ECPA's broader structure, including its provisions for non-content records like email headers, timestamps, and IP addresses, remains largely intact. The statute that governs your email was written when "online" meant dialing into a BBS with a 2400-baud modem.</span></div>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <span class="cc-label">The FTC is using a 1914 law because Congress never passed a privacy statute</span>
+        <span class="cc-risk high">⚠ The United States does not have a comprehensive federal privacy law</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">The data broker industry operates in an even wider legal gap. The regulatory actions the FTC has taken against location data brokers were all brought under Section 5 of the Federal Trade Commission Act, which prohibits "unfair or deceptive acts or practices in or affecting commerce." That statute was enacted in 1914. It was designed to regulate false advertising and anticompetitive behavior. It says nothing about privacy. The FTC uses it for privacy enforcement because it is the most powerful general-purpose consumer protection tool available and because Congress has not given the agency anything better. <a href="#wpm-ref12" class="cite">[12]</a><br><br>But here is what most commentary about the FTC misses, and what Hoofnagle's scholarship makes clear: Section 5's deception prong, which is where nearly all FTC privacy cases live, requires a misrepresentation. The company has to say one thing and do another. If a data broker publishes a privacy policy that honestly states "we collect and sell your location data to anyone who pays," the FTC's deception authority does not reach it. The enforcement framework does not prohibit harmful data practices. It prohibits dishonest ones. A company that is transparent about surveilling you is, under current law, largely untouchable. The tool only works against companies that lie. It structurally cannot reach companies that are honest about doing harmful things. <a href="#wpm-ref12" class="cite">[12]</a></span></div>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <span class="cc-label">The consent framework was never going to work</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">Underlying all of this, from the third-party doctrine to the FTC's enforcement model, is a single assumption: that consumers consent to the collection of their data. You clicked "I agree." You used the service. You voluntarily shared.<br><br>The research on this assumption is devastating. Hoofnagle and Joseph Turow found that a majority of Americans believe the phrase "privacy policy" means a company will protect their privacy, when in fact it is a disclosure document that describes how the company uses and often shares their data. A study from Carnegie Mellon estimated it would take 76 working days per year for a person to read every privacy policy they encounter. The system is not failing because consumers are careless. It is designed so that informed consent is practically impossible. <a href="#wpm-ref4" class="cite">[4]</a><br><br>This is not incidental. The notice-and-consent model has survived for decades not because it works but because the industries that profit from data collection have a structural interest in maintaining a framework that places the burden of privacy protection on the individual rather than on the collector. Consent was never a realistic mechanism for protecting privacy at scale. It is a legal fiction that allows the data economy to function without meaningful constraint.</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout"><span class="label">THE LEGAL ENVIRONMENT</span> The doctrine that governs whether your data is constitutionally protected was written for rotary telephones. The statute that governs your email was written before the internet. The agency enforcing privacy rules against data brokers is using a law written before the First World War, and that law only reaches companies that lie about what they do with your data. The consent framework that underlies all of it assumes you read and understood a document that would take 76 working days a year to read. The law is not keeping you unsafe because it is hostile to privacy. It is keeping you unsafe because it has not caught up. And in some cases, it was designed not to.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- MOVEMENT 3: THE PICTURE THE PIECES MAKE -->
+  <div class="section">
+    <p class="section-title" id="s-wpm-mosaic">The Picture the Pieces Make</p>
+    <p class="section-intro">There is a concept in surveillance law called the mosaic theory. It holds that individual pieces of information, each innocuous on its own, can be assembled into a composite picture that reveals intimate details about a person's life. A single location ping tells you nothing. A month of location pings tells you where someone lives, where they work, who they visit, and what doctor they see. The individual tiles are meaningless. The mosaic is not.</p>
+
+    <div class="compare-grid">
+
+      <div class="compare-card">
+        <span class="cc-label">Justice Sotomayor and the mosaic theory</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">Justice Sotomayor articulated this most clearly in her concurrence in United States v. Jones (2012), a case about GPS tracking of a vehicle. She wrote that the government's ability to aggregate data about a person's public movements could "alter the relationship between citizen and government in a way that is inimical to democratic society." She questioned whether the third-party doctrine remained viable in an age when "people reveal a great deal of information about themselves to third parties in the course of carrying out mundane tasks," and suggested it might be "necessary to reconsider the premise that an individual has no reasonable expectation of privacy in information voluntarily disclosed to third parties," describing the doctrine as "ill-suited to the digital age." <a href="#wpm-ref13" class="cite">[13]</a><br><br>That was 2012. In the years since, the mosaic has only grown denser.</span></div>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <span class="cc-label">What is knowable about a single person</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">Consider what is knowable about a single person from the data sources described in this article. Data broker profiles provide the name, address, phone number, relatives, and estimated income. Location data provides the daily pattern of life: home, work, school, doctor, gym, worship, social. Email archives provide the substance of personal and professional communications, going back years. Breached credential databases provide the keys to accounts that hold financial, medical, and personal information. Public records provide property ownership, court filings, voter registration, and in some states, concealed carry permits.<br><br>No single one of these sources is particularly alarming in isolation. But they do not exist in isolation. They exist simultaneously, for the same person, and they are accessible to anyone with modest resources and motivation.<br><br>A data broker listing that reveals your home address is a record. Combined with a person who has a reason to find you, a stalker, a custody opponent, a fired employee, it becomes a safety risk. A location history is a set of coordinates. Combined with an employer who suspects you are interviewing elsewhere, an insurer who wants to know if you visit a particular clinic, or a prosecutor who wants to establish your presence at a particular place, it becomes evidence. An email archive is a collection of messages. Combined with a divorce proceeding, a wrongful termination claim, or a regulatory investigation, it becomes discoverable material that you cannot retract, redact, or explain away.<br><br>The danger is never the data point. The danger is the combination, and the person doing the combining.</span></div>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <span class="cc-label">When something goes wrong, the law offers almost nothing</span>
+        <span class="cc-risk high">⚠ There is no comprehensive private right of action for privacy violations in the United States</span>
+        <div class="cc-vals">
+          <div class="cc-val" style="flex:1;"><span class="val-body">This is the part that most privacy writing leaves out, and it may be the most important part of all.<br><br>Even where the law provides some nominal protection, the practical remedy available to an individual is close to zero. You cannot sue a data broker for listing your home address. Carpenter requires a warrant for government access to cell-site data, but it says nothing about commercial collection and sale of the same data. The FTC enforcement actions against location data brokers resulted in consent decrees and bans, not compensation for the millions of people whose data was sold to anti-abortion groups, political operatives, and defense contractors. ECPA provides some statutory damages, but bringing a case is expensive and the burden of proof is on the individual. There is no comprehensive private right of action for privacy violations in the United States.<br><br>The system does not offer a meaningful remedy after the fact. This is not an oversight. It is the architecture. A legal framework built on notice and consent, enforced by an agency that can only reach deceptive practices, in a country without a federal privacy law, produces exactly this outcome: widespread exposure with no recourse.<br><br>Which means that prevention is not merely preferable. It is the only realistic protection available. The question is not what you do after your data is misused. It is whether you can prevent the exposure from existing in the first place.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CLOSING -->
+  <div class="compare-grid">
+    <div class="compare-card">
+      <div class="cc-vals">
+        <div class="cc-val" style="flex:1;"><span class="val-body">The law is decades behind the technology. The gap between what is legal and what is safe is enormous. Most people are not being protected by the legal framework and do not know it. The patchwork of doctrines, statutes, and enforcement actions described in this article is not a system designed to protect you. It is a system that was built for a different world, stretched and adapted by regulators and courts doing the best they can with tools that were never designed for this purpose.<br><br>That gap is where Orion Private works. We do not sell fear and we do not deal in abstraction. We map the specific, concrete ways your information is exposed. We assess that exposure against the specific threats relevant to your life. We produce an evidence-based report that tells you what to address, in what order, and why. Every recommendation traces back to a documented finding. Nothing is generic. Nothing is based on speculation.<br><br>If you have read this far, you already understand the problem better than most people ever will. The question is whether understanding is enough, or whether you want to do something about it.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- REFERENCES -->
+  <div class="references">
+    <h3>References</h3>
+    <ol class="ref-list">
+      <li id="wpm-ref1"><span class="ref-num">[1]</span> <span>Sweeney, L. "Simple Demographics Often Identify People Uniquely." Carnegie Mellon University, Data Privacy Working Paper 3 (2000). Demonstrated that 87% of the U.S. population could be uniquely identified by zip code, date of birth, and gender. Sweeney subsequently identified the medical records of Governor William Weld by cross-referencing anonymized hospital data with voter registration rolls. | <a href="https://dataprivacylab.org/projects/identifiability/paper1.pdf" target="_blank">dataprivacylab.org</a></span></li>
+      <li id="wpm-ref2"><span class="ref-num">[2]</span> <span>California Senate Bill 362, the Delete Act. Signed into law October 2023. Requires data brokers to register with the California Privacy Protection Agency and establishes a deletion mechanism for consumers.</span></li>
+      <li id="wpm-ref3"><span class="ref-num">[3]</span> <span>Consumer Financial Protection Bureau, "Protecting Americans From Harmful Data Broker Practices (Regulation V)." Proposed rule, Federal Register, December 13, 2024. Docket No. CFPB-2024-0044.</span></li>
+      <li id="wpm-ref4"><span class="ref-num">[4]</span> <span>Hoofnagle, C.J. Federal Trade Commission Privacy Law and Policy. Cambridge University Press (2016). See also Hoofnagle's scholarship on commercial data brokers performing quasi-law-enforcement functions, the argument that the Privacy Act of 1974 should apply to them, and Hoofnagle, C.J. and Turow, J. on consumer misunderstanding of the term "privacy policy."</span></li>
+      <li id="wpm-ref5"><span class="ref-num">[5]</span> <span>Electronic Frontier Foundation, "Federal Regulators Limit Location Brokers from Selling Your Whereabouts: 2024 in Review." December 2024. Summarizes FTC enforcement actions against X-Mode Social/Outlogic (January 2024), InMarket (January 2024), Gravy Analytics/Venntel and Mobilewalla (December 2024). | <a href="https://www.eff.org/deeplinks/2024/12/federal-regulators-limit-location-brokers-selling-your-whereabouts-2024-review" target="_blank">eff.org</a></span></li>
+      <li id="wpm-ref6"><span class="ref-num">[6]</span> <span>Senator Ron Wyden, letter to the Federal Trade Commission and Securities and Exchange Commission regarding Near Intelligence. February 13, 2024. Confirmed by EPIC and reported by the Wall Street Journal (May 2023) and The Record (February 2024). | <a href="https://epic.org/data-broker-helped-anti-abortion-group-target-planned-parenthood-visitors-wyden-letter-reveals/" target="_blank">epic.org</a></span></li>
+      <li id="wpm-ref7"><span class="ref-num">[7]</span> <span>de Montjoye, Y-A., Hidalgo, C.A., Verleysen, M., and Blondel, V.D. "Unique in the Crowd: The privacy bounds of human mobility." Nature Scientific Reports 3, 1376 (2013). | <a href="https://www.nature.com/articles/srep01376" target="_blank">nature.com</a></span></li>
+      <li id="wpm-ref8"><span class="ref-num">[8]</span> <span>de Montjoye, Y-A., Gambs, S., Blondel, V., et al. "The risk of re-identification remains high even in country-scale location datasets." Patterns, Volume 2, Issue 3 (2021). | <a href="https://www.sciencedirect.com/science/article/pii/S2666389921000143" target="_blank">sciencedirect.com</a></span></li>
+      <li id="wpm-ref9"><span class="ref-num">[9]</span> <span>Smith v. Maryland, 442 U.S. 735 (1979). Established the third-party doctrine, holding that individuals have no reasonable expectation of privacy in information voluntarily shared with third parties.</span></li>
+      <li id="wpm-ref10"><span class="ref-num">[10]</span> <span>Carpenter v. United States, 585 U.S. ___ (2018). Held that acquisition of historical cell-site location information constitutes a Fourth Amendment search requiring a warrant. | <a href="https://www.supremecourt.gov/opinions/17pdf/16-402_h315.pdf" target="_blank">supremecourt.gov</a></span></li>
+      <li id="wpm-ref11"><span class="ref-num">[11]</span> <span>United States v. Warshak, 631 F.3d 266 (6th Cir. 2010). Held that email content is protected by the Fourth Amendment regardless of storage duration, limiting ECPA's 180-day rule.</span></li>
+      <li id="wpm-ref12"><span class="ref-num">[12]</span> <span>Hoofnagle, C.J. Federal Trade Commission Privacy Law and Policy. Cambridge University Press (2016). Argues that the FTC's consumer protection framework under Section 5 of the FTC Act (1914) is being stretched to perform the function of a comprehensive privacy law that Congress has never enacted. See also Hoofnagle's analysis of Section 5's structural limitation: the deception prong requires a misrepresentation, meaning transparent harmful practices are beyond the agency's reach.</span></li>
+      <li id="wpm-ref13"><span class="ref-num">[13]</span> <span>United States v. Jones, 565 U.S. 400 (2012). Justice Sotomayor, concurring. Questioned the viability of the third-party doctrine in the digital age and endorsed the mosaic theory of surveillance.</span></li>
+    </ol>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="blog-footer">
+    <strong>Disclaimer:</strong> This analysis is for educational and informational purposes only. It is not legal advice. The author is not a licensed attorney. All claims are based on published, peer-reviewed research, government enforcement actions, Supreme Court opinions, federal statutes, and investigative journalism, and are cited accordingly. This article reflects publicly available information as of April 2026.
+  </div>
+
+</div>
+
 </div>
 <!-- POST VIEWER (Proton vs Tuta) -->
 <div class="pg" id="p-post-pt">
@@ -5195,7 +5657,7 @@ ctx.strokeStyle='rgba('+pColor+','+(lineAlpha*(isLight?.8:1))+')';
 })();
 
 /* NAV */
-var pages=['start','research','services','about','contact','post-pt','post-nm','post-adult','post-msg','post-enc','post-photos','post-db', 'post-ftc','post-patel', ];
+var pages=['start','research','services','about','contact','post-pt','post-nm','post-adult','post-msg','post-enc','post-photos','post-db', 'post-ftc','post-patel', 'post-wpm'];
 var navPages=[['start', 'Start'],['research','Research'],['services','Services'],['about','About'],['contact','Contact']];
 var dl=document.getElementById('dl'),mm=document.getElementById('mm');
 navPages.forEach(function(n){
